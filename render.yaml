@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: hrpilot-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python langflow_app/main.py
+    plan: free
+    envVars:
+      - key: OPENAI_API_KEY
+        value: YOUR_OPENAI_KEY
